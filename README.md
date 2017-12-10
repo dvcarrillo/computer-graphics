@@ -1,1 +1,18 @@
-# computer-graphics-basics
+# Computer Graphics Basics
+This program contains works on Computer Graphics using OpenGL and C++.
+It is part of the course of Informática Gráfica at the University of Granada, so I expect it
+to be used as a reference for everyone interested in this matter, but please avoid copying it.
+That is also the reason why the program is fully in Spanish.
+
+## Includes
+Practices 1 to 4 of the subject:
+- Basic figures, like cubes and tetrahedrons
+- A PLY reader with some figures in PLY format
+- Figures of revolution
+- Animations and hierarchical figures
+- Lights and materials applied to objects
+- Textures in a 2D panel
+
+## How to use it
+Just run `make` in the root folder and then `./practica4` to execute it.
+The program will show instructions on how to use it.
