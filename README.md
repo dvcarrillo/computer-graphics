@@ -16,3 +16,5 @@ Practices 1 to 4 of the subject:
 ## How to use it
 Just run `make` in the root folder and then `./practica4` to execute it.
 The program will show instructions on how to use it.
+**NOTE:** make sure that the package `freeglu3-dev` is installed on your machine before compiling
+the program.
