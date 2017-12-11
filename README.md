@@ -1,4 +1,6 @@
 # Computer Graphics Basics
+![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics-basics/master/screenshot.png "Figure and lights with flat shadowing")
+
 This program contains works on Computer Graphics using OpenGL and C++.
 It is part of the course of Informática Gráfica at the University of Granada, so I expect it
 to be used as a reference for everyone interested in this matter, but please avoid copying it.
