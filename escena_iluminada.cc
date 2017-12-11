@@ -103,7 +103,7 @@ void EscenaIluminada::DibujarEscena() {
 	// Activacion de las luces
 	if (estado == 1) {
 		luz1.Enable();
-		/* luz1.DibujaPosicion(); */
+		// luz1.DibujaPosicion();
 		luz2.Enable();
 	}
 

@@ -12,6 +12,7 @@
 
 #include <GL/gl.h>
 #include <GL/glut.h>
+#include <iostream>
 #include "cubo.h"
 #include "cargadorBMP.h"
 
@@ -25,7 +26,7 @@ class EscenaTex
 private:
 	// Propiedades del tablero
 	std::vector<GLfloat> v_tablero;		// vertices del tablero
-	std::vector<GLfloat> v_textura;		// vertices de la textura
+	std::vector<GLfloat> v_textura;		// vertices de la textura (texels)
 
 	// Imagen a cargar
 	CargadorBMP imagen;

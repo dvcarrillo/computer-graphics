@@ -76,10 +76,6 @@ public:
 	// Se deberia llamar a esta funcion una vez definidos lados y vertices
 	void CalcularNormales();
 
-	/******************** FUNCION DE PRUEBA  ********************/
-	void DibujarNormales(float tam);
-	/****************** FIN FUNCION DE PRUEBA  ******************/
-
 	// Establece las transformaciones
 	// Recibe:
 	//	traslacion_?: parametros de traslacion

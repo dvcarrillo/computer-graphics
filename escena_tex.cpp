@@ -10,18 +10,59 @@
 #include "escena_tex.h"
 
 /*******************************************************************/
+// Devuelve un valor entre 0 y 1 segun los parametros de entrada
+/*******************************************************************/
+
+float NormalizarTexel (float min, float max, float value) {
+	float minimo = min;
+	float maximo = max;
+
+	if (min > max) {
+		float aux = maximo;
+		maximo = minimo;
+		minimo = aux;
+	}
+
+	return ((value - minimo) / (maximo - minimo));
+}
+
+/*******************************************************************/
 //
 /*******************************************************************/
 
 EscenaTex::EscenaTex() {
-	v_tablero = {-40, 	-40,
-				40, 	-40,
-				40, 	40,
-				-40, 	40};
-	v_textura = {0.0,	1.0,
-				1.0, 	1.0,
-				1.0,	0.0,
-				0.0,	0.0};
+	float min_x = -40.0f, max_x = 40.0f;
+	float min_y = 40.0f, max_y = -40.0f;
+
+	// Dimension X (desde 0 hasta 40)
+	for (float x = -40.0f; x < 40.0f; x += 10.0f) {
+		// Dimension Y (desde 0 hasta 40)
+		for (float y = 40.0f; y > -40.0f; y -= 10.0f) {
+			// vertice 1
+			v_tablero.push_back(x);
+			v_tablero.push_back(y);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
+
+			// vertice 2
+			v_tablero.push_back(x + 10.0f);
+			v_tablero.push_back(y);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 10.0f));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
+
+			// vertice 3
+			v_tablero.push_back(x + 10.0f);
+			v_tablero.push_back(y - 10.0f);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 10.0f));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y - 10.0f));
+
+			// vertice 4
+			v_tablero.push_back(x);
+			v_tablero.push_back(y - 10.0f);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y - 10.0f));
+		}
+	}
 }
 
 /*******************************************************************/
@@ -29,14 +70,38 @@ EscenaTex::EscenaTex() {
 /*******************************************************************/
 
 EscenaTex::EscenaTex(const char * imagepath) {
-	v_tablero = {-40, 	-40,
-				40, 	-40,
-				40, 	40,
-				-40, 	40};
-	v_textura = {0.0,	1.0,
-				1.0, 	1.0,
-				1.0,	0.0,
-				0.0,	0.0};
+	float min_x = -40, max_x = 40;
+	float min_y = 40, max_y = -40;
+
+	// Dimension X (desde 0 hasta 40)
+	for (int x = -40; x < 40; x += 5) {
+		// Dimension Y (desde 0 hasta 40)
+		for (int y = 40; y > -40; y -= 5) {
+			// vertice 1
+			v_tablero.push_back(x);
+			v_tablero.push_back(y);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
+
+			// vertice 2
+			v_tablero.push_back(x + 5);
+			v_tablero.push_back(y);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 5));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
+
+			// vertice 3
+			v_tablero.push_back(x + 5);
+			v_tablero.push_back(y + 5);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 5));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y + 5));
+
+			// vertice 4
+			v_tablero.push_back(x);
+			v_tablero.push_back(y + 5);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y + 5));
+		}
+	}
 	CargarImagen(imagepath);
 }
 
@@ -78,7 +143,7 @@ void EscenaTex::Dibujar() {
 	glVertexPointer(2, GL_FLOAT, 0, &v_tablero[0]);
 	glTexCoordPointer(2, GL_FLOAT, 0, &v_textura[0]);
 
-	glDrawArrays(GL_QUADS, 0, 4);
+	glDrawArrays(GL_QUADS, 0, v_tablero.size());
 
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glBindTexture(GL_TEXTURE_2D, 0);
