@@ -1,10 +1,10 @@
 # Computer Graphics Basics
 ![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics-basics/master/screenshot.png "Figure and lights with flat shadowing")
 
-This program contains works on Computer Graphics using OpenGL and C++.
+**This program contains works on Computer Graphics using OpenGL and C++.**
 It is part of the course of Informática Gráfica at the University of Granada, so I expect it
 to be used as a reference for everyone interested in this matter, but please avoid copying it.
-That is also the reason why the program is fully in Spanish.
+That is also the reason why the program is completely in Spanish.
 
 ## Includes
 Practices 1 to 4 of the subject:
@@ -18,5 +18,5 @@ Practices 1 to 4 of the subject:
 ## How to use it
 Just run `make` in the root folder and then `./practica4` to execute it.
 The program will show instructions on how to use it.
-Make sure that the package `freeglu3-dev` is installed on your machine before compiling
-the program.
+Make sure that the package `freeglu3-dev` is installed on your machine **before compiling
+the program.**
