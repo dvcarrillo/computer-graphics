@@ -33,11 +33,12 @@ float NormalizarTexel (float min, float max, float value) {
 EscenaTex::EscenaTex() {
 	float min_x = -40.0f, max_x = 40.0f;
 	float min_y = 40.0f, max_y = -40.0f;
+	float step = 10.0f;
 
 	// Dimension X (desde 0 hasta 40)
-	for (float x = -40.0f; x < 40.0f; x += 10.0f) {
+	for (float x = min_x; x < max_x; x += step) {
 		// Dimension Y (desde 0 hasta 40)
-		for (float y = 40.0f; y > -40.0f; y -= 10.0f) {
+		for (float y = min_y; y > max_y; y -= step) {
 			// vertice 1
 			v_tablero.push_back(x);
 			v_tablero.push_back(y);
@@ -45,22 +46,22 @@ EscenaTex::EscenaTex() {
 			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
 
 			// vertice 2
-			v_tablero.push_back(x + 10.0f);
+			v_tablero.push_back(x + step);
 			v_tablero.push_back(y);
-			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 10.0f));
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + step));
 			v_textura.push_back(NormalizarTexel(min_y, max_y, y));
 
 			// vertice 3
-			v_tablero.push_back(x + 10.0f);
-			v_tablero.push_back(y - 10.0f);
-			v_textura.push_back(NormalizarTexel(min_x, max_x, x + 10.0f));
-			v_textura.push_back(NormalizarTexel(min_y, max_y, y - 10.0f));
+			v_tablero.push_back(x + step);
+			v_tablero.push_back(y - step);
+			v_textura.push_back(NormalizarTexel(min_x, max_x, x + step));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y - step));
 
 			// vertice 4
 			v_tablero.push_back(x);
-			v_tablero.push_back(y - 10.0f);
+			v_tablero.push_back(y - step);
 			v_textura.push_back(NormalizarTexel(min_x, max_x, x));
-			v_textura.push_back(NormalizarTexel(min_y, max_y, y - 10.0f));
+			v_textura.push_back(NormalizarTexel(min_y, max_y, y - step));
 		}
 	}
 }
