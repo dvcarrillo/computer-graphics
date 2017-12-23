@@ -2,9 +2,10 @@
 ![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics-basics/master/screenshot.png "Figure and lights with flat shadowing")
 
 **This repo contains works on Computer Graphics using OpenGL and C++.**
-It is part of the course of Informática Gráfica at the University of Granada, so I expect it
-to be used as a reference for everyone interested in this matter, but please avoid copying it.
-That is also the reason why the program is completely in Spanish.
+It is part of the course of **Informática Gráfica from the BSc in Computer Engineering at the 
+University of Granada**, so I expect it to be used as a reference for everyone interested in
+this matter, but please avoid copying it. That is also the reason why the program is completely
+in Spanish.
 
 ## Includes
 Practices 1 to 4 of the subject:
