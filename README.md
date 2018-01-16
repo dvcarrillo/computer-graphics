@@ -8,7 +8,6 @@ this matter, but please avoid copying it. That is also the reason why the progra
 in Spanish.
 
 ## Includes
-Practices 1 to 4 of the subject:
 - Basic figures, like cubes and tetrahedrons
 - A PLY reader with some figures in PLY format
 - Figures of revolution
