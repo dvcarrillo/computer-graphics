@@ -1,5 +1,5 @@
-# Computer Graphics Basics
-![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics-basics/master/screenshot.png "Figure and lights with flat shadowing")
+# Computer Graphics
+![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics/master/screenshot.png "Figure and lights with flat shadowing")
 
 **This repo contains works on Computer Graphics using OpenGL and C++.**
 It is part of the course of **Informática Gráfica from the BSc in Computer Engineering at the 
