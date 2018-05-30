@@ -14,7 +14,7 @@ University of Granada.
 - Textures in a 2D panel
 
 ## How to use it
-Just run `make` in the root folder and then `./practica4` to execute it.
+Run `make` in the root folder and then `./practica4` to execute it.
 The program will show instructions on how to use it.
 Make sure that the package `freeglu3-dev` is installed on your machine **before compiling
 the program.**
