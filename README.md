@@ -5,7 +5,7 @@ This repository contains works on Computer Graphics, made with OpenGL and C++.
 They were created as part of the course Informática Gráfica from the BSc in Computer Engineering at the 
 University of Granada.
 
-## Includes
+## It includes
 - Basic figures, like cubes and tetrahedrons
 - A PLY reader with some figures in PLY format
 - Figures of revolution
