@@ -16,7 +16,7 @@ University of Granada.
 ## How to use it
 Run `make` in the root folder and then `./practica4` to execute it.
 The program will show instructions on how to use it.
-Make sure that the package `freeglu3-dev` is installed on your machine **before compiling
+Make sure that the package `freeglut3-dev` is installed on your machine **before compiling
 the program.**
 
 The program will print instructions when executed.
