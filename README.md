@@ -1,11 +1,10 @@
 # Computer Graphics
-![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics/master/screenshot.png "Figure and lights with flat shadowing")
-
 This repository contains works on Computer Graphics, made with OpenGL and C++.
 They were created as part of the course Informática Gráfica from the BSc in Computer Engineering at the 
 University of Granada.
 
 ## What's in it?
+![openGL-figure](https://raw.githubusercontent.com/dvcarrillo/computer-graphics/master/screenshot.png "Figure and lights with flat shadowing")
 - Basic figures, like cubes and tetrahedrons
 - A PLY reader with some figures in PLY format
 - Figures of revolution
